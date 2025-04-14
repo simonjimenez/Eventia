@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  event_date: 2025-04-14
+  event_time: 2025-04-14 19:01:15
+  address: MyString
+  max_assistant: 1
+
+two:
+  title: MyString
+  description: MyText
+  event_date: 2025-04-14
+  event_time: 2025-04-14 19:01:15
+  address: MyString
+  max_assistant: 1

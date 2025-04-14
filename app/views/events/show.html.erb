@@ -1,0 +1,7 @@
+<%= @event.title %>
+<%= @event.description %>
+<%= @event.event_date %>
+<%= @event.event_time%>
+<%= @event.address %>
+<%= @event.max_assistant %>
+<%= link_to "delete", event_path(@event), data:{turbo_method: :delete, turbo_confirm: "are you sure?"} %>
