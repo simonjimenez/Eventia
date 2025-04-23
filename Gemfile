@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ], require: "debug/prelude"
+  gem "dotenv-rails"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
@@ -60,5 +61,9 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-
+gem "cloudinary"
 gem "simple_form", "~> 5.3"
+gem "sassc-rails"
+gem "bootstrap", "~> 5.2"
+gem "font-awesome-sass", "~> 6.1"
+gem "autoprefixer-rails"

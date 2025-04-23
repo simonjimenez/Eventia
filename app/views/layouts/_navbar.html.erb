@@ -1,0 +1,59 @@
+<div class="navbar navbar-expand-sm navbar-lewagon bg-dark">
+  <div class="d-flex">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag "passlinelogo.png" %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto ">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to "Home", "#", class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Messages", "#", class: "nav-link text-white" %>
+          </li>
+          <li class="nav-item dropdown">
+            <% if current_user.photo.attached?%>
+                <%= image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+             <% else %>
+                <%= image_tag "blankprofile.jpg",class: "avatar dropdown-toggle", id: "blankprofile", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+            </div>
+          </li>
+        <%else %>
+          <li class="nav-item">
+             <%= link_to "Eventos", events_path , class:"nav-link text-white" %>
+          </li>
+           <li class="nav-item">
+             <%= link_to "Cartelera", events_path , class:"nav-link text-white" %>
+          </li>
+           <li class="nav-item">
+             <%= link_to "Kioskos", events_path , class:"nav-link text-white" %>
+          </li>
+           <li class="nav-item">
+             <%= link_to "Eres productor?", events_path , class:"nav-link text-white" %>
+          </li>
+           <li class="nav-item">
+             <%= link_to "Mis etickets", events_path , class:"nav-link text-white" %>
+          </li>
+           <li class="nav-item">
+             <%= link_to "Contacto", events_path , class:"nav-link text-white" %>
+          </li>
+          <li class="nav-item">
+             <%= link_to "Login", new_user_session_path, class: "nav-link text-white" %>
+          </li>
+        <%end %>
+      </ul>
+    </div>
+  </div>
+</div>
