@@ -36,3 +36,27 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+.card{
+  border-radius: 10px;
+  border: 1px solid grey  ;
+  width: 400px;
+  overflow: hidden;
+
+}
+
+.icon-address{
+  color: grey;
+}
+.address{
+  color: grey;
+
+}
+.description{
+  color: black;
+  font-size: 25px;
+}
+.time_prim{
+  font-size: 30px;
+  color: black;
+}
