@@ -1,51 +1,43 @@
 <div class="container">
   <div class="row">
     <% @events.each do |e|  %>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <% if  e.photo.attached? %>
-            <%= image_tag e.photo, class:"card-img-top"%>
-          <% else %>
-              <%= image_tag "noimage.jpg",class:"card-img-top"%>
-          <% end %>
-            <div class="card-body">
-              <h5 class="card-title"><%= e.title %></h5>
-               <p class="card-text"><%= e.description %></p>
-                <%= link_to "Ver mas", event_path(e), class:"btn btn-primary" %>
-
-            </div>
-        </div>
-      </div>
-    <% end %>
-   </div>
-</div>
-<div class=" card">
-
-  <div class="">
-    <div class="">
-      <span class="">
-        <span class="">
-          <img src="https://imagenes.passline.com/eventos/-491344-rec.jpg" class="" data-slug="campana-de-abonados-trasandino-2025" alt="Campaña de Abonados Trasandino 2025" data-delay="">
-
-        </span>
-      </span>
-    </div>
-      <div class="">
+    <div class="col-4">
+      <div class="card mb-5 mt-5">
         <div class="">
-          <small class="address"><i  class="fa-solid fa-location-dot icon-address"></i> Estadio Regional de Los Andes</small>
-          <p class=" description">Campaña de Abonados Trasandino 2025</p>
-          <p class=""></p>
           <div class="">
-            <div class=" fecha">
-              <span class="time_prim">04</span>
-              <span class="year">Mar<br>2025</span>
-            </div>
+            <span class="">
+              <span class="">
+                <% if e.photo.attached? %>
+                  <%= image_tag e.photo, class:"card-img-top image"%>
+                <% else %>
+                  <%= image_tag "noimage.jpg",class:"card-img-top image"%>
+                <% end %>
+              </span>
+            </span>
+          </div>
+          <div class="">
             <div class="">
-                <span class="time_second">00</span>
-                <span class="minute">00<br>hrs</span>
+              <small class="address"><i  class="fa-solid fa-location-dot icon-address"></i><%= e.address %></small>
+              <p class=" description"><%= e.title %></p>
+              <p class=""><%= e.description %> </p>
+              <div class="time">
+                <div class="fecha">
+                  <span class="time_prim"><%= e.event_date.day %></span>
+                  <div class="month">
+                    <span class="year"><%= e.event_date.month %><br><%= e.event_date.year %></span>
+                  </div>
+                </div>
+                <span class="pipeline">|</span>
+                <div class="fecha">
+                    <span class="time_prim"><%= e.event_time.hour %></span>
+                    <span class="year"><%#= e.event_time.minute %><br>hrs</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
+      </div>
+      <% end %>
   </div>
-
 </div>

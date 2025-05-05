@@ -57,6 +57,37 @@
   font-size: 25px;
 }
 .time_prim{
-  font-size: 30px;
+  font-size: 40px;
   color: black;
+  margin-right: 3px;
+  display: flex;
+  align-items: start;
+}
+
+.fecha{
+  display: flex;
+  margin-right: 30px;
+
+}
+.month{
+  display: flex;
+  align-items: center;
+
+}
+.year{
+  margin: 0;
+}
+.time{
+  display:flex ;
+}
+
+.pipeline{
+  font-size: 40px;
+  color: grey;
+  margin-right: 20px;
+}
+
+.image{
+  width: 450px;
+  height: 400px;
 }
