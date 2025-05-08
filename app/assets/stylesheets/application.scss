@@ -1,5 +1,10 @@
 @import "bootstrap";
-@import "font-awesome";
+// @import "font-awesome";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
  .navbar-lewagon {
   justify-content: space-between;
@@ -67,6 +72,7 @@
 .fecha{
   display: flex;
   margin-right: 30px;
+  color: black;
 
 }
 .month{
@@ -90,4 +96,36 @@
 .image{
   width: 450px;
   height: 400px;
+}
+
+.event-start{
+  display: flex;
+ border-top: 1px solid grey;
+ border-bottom: 1px solid grey;
+
+ margin-bottom: 30px;
+}
+
+.border-derecho{
+  border-right: 1px solid grey;
+}
+
+.icono-location{
+  color: orange;
+  font-size: 50px;
+}
+
+.direccion{
+  color: orange;
+}
+body{
+  background-color: #F2F2F2;
+}
+
+.video{
+  background-color: white;
+}
+
+.info{
+  color: black;
 }

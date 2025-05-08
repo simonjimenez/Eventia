@@ -2,7 +2,8 @@
   <div class="row">
     <% @events.each do |e|  %>
     <div class="col-4">
-      <div class="card mb-5 mt-5">
+      <div class="card mb-5 mt-5 ">
+        <%= link_to event_path(e), class:"text-decoration-none" do %>
         <div class="">
           <div class="">
             <span class="">
@@ -15,11 +16,11 @@
               </span>
             </span>
           </div>
-          <div class="">
+          <div class="p-3">
             <div class="">
-              <small class="address"><i  class="fa-solid fa-location-dot icon-address"></i><%= e.address %></small>
+              <small class="address"><i  class="fa-solid fa-location-dot icon-address me-1"></i><%= e.address %></small>
               <p class=" description"><%= e.title %></p>
-              <p class=""><%= e.description %> </p>
+              <p class="info"><%= e.description %> </p>
               <div class="time">
                 <div class="fecha">
                   <span class="time_prim"><%= e.event_date.day %></span>
@@ -37,6 +38,7 @@
           </div>
         </div>
       </div>
+       <% end %>
       </div>
       <% end %>
   </div>
